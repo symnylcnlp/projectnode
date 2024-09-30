@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Phantom Beauty House Giriş Sayfası</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+	<div class="container">
+		
+		
+	    <form id="loginForm" method="POST" action="/auth/login">
+            <div class="form signin">
+                <h2>GİRİŞ YAP</h2>
+                <div class="inputBox">
+                    <input type="text" name="username" required>
+                    <i class="fa-regular fa-user"></i>
+                    <span>KULLANICI</span>
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="password" required>
+                    <i class="fa-solid fa-lock"></i>
+                    <span>ŞİFRE</span>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="GİRİŞ YAP">
+                </div>
+            </div>
+        </form>
+        <div id="message"></div>
+	</div>
+</body>
+</html>

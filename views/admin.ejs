@@ -1,0 +1,113 @@
+
+<html>
+<head>
+    <title>Phantom Beauty House Admin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+
+</head>
+<body>
+    <section class="content-header">
+        <h1>Hizmetler</h1>
+    </section>
+    <div class="content">
+        <div class="clearfix"></div>
+    </div>
+    <div class="box box-primary" style="margin:5px;padding:5px;">
+        <div class="box-body">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Hizmet Ekle</button>
+            
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Yeni Hizmet Ekle</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="addForm" class="mt-4">
+                                <div class="form-group">
+                                    <label for="title">Title:</label>
+                                    <input type="text" class="form-control" id="title" name="title" placeholder="title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="description">Description:</label>
+                                    <input type="text" class="form-control" id="description" name="description" placeholder="Description" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="description2">Description2:</label>
+                                    <input type="text" class="form-control" id="description2" name="description2" placeholder="Description2" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="images">image:</label>
+                                    <input type="text" class="form-control" id="images" name="images" placeholder="images" required>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-block" onclick="addData()">Hizmet Ekle</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>TITLE</th>
+                            <th>DESCRIPTION</th>
+                            <th>DESCRIPTION2</th>
+                            <th>IMAGE</th>
+                            <th>İŞLEMLER</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data-body">
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel2">Hizmet Düzenleme</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editForm" class="mt-4">
+                            <input type="hidden" id="editId" name="id">
+                            <div class="form-group">
+                                <label for="edittitle">title:</label>
+                                <input type="text" class="form-control" id="edittitle" name="title" placeholder="title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="editdescription">Description:</label>
+                                <input type="text" class="form-control" id="editdescription" name="description" placeholder="description" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="editdescription2">Description2:</label>
+                                <input type="text" class="form-control" id="editdescription2" name="description2" placeholder="description2" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="editimage">Image:</label>
+                                <input type="text" class="form-control" id="editimage" name="images" placeholder="images" required>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-block" onclick="updateData()">Hizmeti Düzenle</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
