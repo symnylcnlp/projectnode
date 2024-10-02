@@ -2687,8 +2687,8 @@ input, select, textarea {
 
 				#header .logo .symbol img {
 					display: block;
-					width: 2em;
-					height: 2em;
+					width: 150px;
+					height: 150px;
 				}
 
 		#header nav {
@@ -3150,12 +3150,14 @@ input, select, textarea {
 		max-width: 68em;
 		margin: 0 auto;
 		padding: 0 2.5em;
+		align-items: center;
 	}
 
 		@media screen and (max-width: 736px) {
 
 			#wrapper > * > .inner {
 				padding: 0 1.25em;
+				align-items: center;
 			}
 
 		}
